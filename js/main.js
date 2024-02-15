@@ -159,29 +159,128 @@ if((nat== "Français" && age >= 18) ||(nat== "Etranger" && age <18))
 //     } 
     
     /*-------------------------------------Les boucles-------------------------*/
-
+    
     //Les boucles sont des structures permettant d'excecuter plusieurs fois des instructions
     
-    //Boucle à itération non définies(while) 
+    //Boucle à itération non définies(while) : tant que la condition est vraie 
     // let i =0
     // while(i<9) {
-    //     i=i+1;
-    //     console.log(i)
-    // } 
+        //     i=i+1;
+        //     console.log(i)
+        // } 
+        
+        //Afficher la table de multiplication de 7
+        let i=0
+        while (i <=10) {
+            let res = i * 7;
+            console.log(`${i} x 7 = ${res}`)
+            i = i+ 1;// Incrementer i pour éviter une boucle infinie
+        }
 
-    //Afficher la table de multiplication de 7
-   let i=0
-   while (i <=10) {
-    let res = i * 7;
-    console.log(`${i} x 7 = ${res}`)
-    i = i+ 1;
-   }
-   //Ecire un algothmique qui inverse les valeur de A et B quel que soit le contenu de A et B
-   // a= 12 b=14 
-   let a=12
-   let b=14
-   console.log(a, b)
-   let temp =a;
-   a = b;
-   b = temp;
-   console.log(a, b);
+        //Déclarer vos revenus, avec une base de 20 000euros
+        //Tant que vos revenus ne sont pas supérieurs à 30 000 euros 
+            //Chaque année mes revenus augmentent de 10% grâce à mes placements
+        //Au bout de combien d'années mes revenus dépasseront 30 000 euros
+        let r=20000
+        let an=0
+        while (r <=30000){
+            r = r * 1.10;
+            an= an+1; // an+=1
+        }
+        console.log(`Au bout de ${an} ans j'aurais atteint la somme ${r}`)
+        
+        /* 
+            La population de la ville de Marrakech est de 1, 000, 000 habitants et elle augmente de 50, 000 habitants par an.
+            Celle de la ville Agadir est de 500, 000 habitants et elle augmente de 8% par an.
+            Ecrire un algorithme permettant de déterminer dans combien d'années la population de la ville Agadir dépassera celle de la ville de Marrakech
+            */
+           let mar= 1000000;
+           let aga= 500000;
+           let year=0;
+           while(mar> aga){
+            mar +=50000; //mar= mar+50000 =SUCRE SYNTAXIQUE
+            aga*=1.08; //aga= aga*1.08 = SUCRE SYNTAXIQUE
+            year= year+1;
+           }
+           console.log(`Au bout de ${year} année Agadir dépassera la population de Marrakech`)
+        //Ecire un algothmique qui inverse les valeur de A et B quel que soit le contenu de A et B
+        // a= 12 b=14 
+        let a=12
+        let b=14
+        console.log(a, b)
+        let temp =a;
+        a = b;
+        b = temp;
+        console.log(a, b);
+
+    //Boucle à itération définies(for) : 
+    for(let i=0; i<11; i = i +1){
+        console.log(`${i} x 7= ${i*7}`)
+    }
+    // Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur en lui indiquant si il est au dessus ou au dessous de ma bonne valeur
+    //Demande à l'utilisateur un nombre 
+    //Tant que la réponse n'est pas bonne 
+        //Si sa réponse est inférieur au chiffre magique 
+            //Le nombre magique est plus grand, donne moi une autre réponse
+            //Sinon
+            //Le nombre magique est plus petit, donne moi une autre réponse
+    // let nombre= prompt("Devines le bon nombre")
+
+    // while(nombre !=13){
+    //     if(nombre< 13){
+    //         nombre= prompt("Le nombre magique est plus grand, donne moi une autre réponse");
+    //     } else if(nombre> 13){
+    //        nombre= prompt("Le nombre magique est plus petit, donne moi une autre réponse");
+    //     }
+    // } 
+    
+    // alert("Le numéro est bon")
+
+
+
+        
+        /*-------------------------------------Les fonctions-------------------------*/
+        /* Une fonction est un bloc d'instructions réutilisable, elle peut prendre des paramétres et renvoyer un résultat , elle est déclarée avec le mot function*/
+    function bonjourmonde(){
+        console.log("Hello Word")
+    }
+    bonjourmonde()
+    bonjourmonde()
+    
+    function calculNasa(){
+        let res = 46654
+        let essence = 7746
+        let anneLumiere = 446555
+
+        let solution = ((res*essence)/anneLumiere)*64564645
+
+        return solution
+    }
+let solution = calculNasa()
+
+//Ecrire une fonction qui afiche Bonjour
+function bonjour1(){
+    console.log("Bonjour")
+}
+bonjour1()
+
+// Ecrire une fonction qui prend en paramétre et qui affiche Bonjour [Le prénom passé en paramétre]
+function Bonjour2(prenom){
+    console.log("Bonjour", prenom)
+    /*return "Bonjour" + prenom
+    */
+}
+Bonjour2("Sarah")
+Bonjour2("Kenza")
+/*let hello3 = Bonjour("Kenza")
+console.log(hello3);
+*/
+
+// Ecrire une fonction qui calcule le périmétre d'un carré et l'afficher
+function Carré(C){
+let solution1=(C*4)
+return solution1
+}
+let solution1= 3*4
+console.log(solution1)
+//Algorithme qui calcule et affiche le carré d'un nombre 

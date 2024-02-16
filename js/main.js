@@ -239,8 +239,8 @@ if((nat== "Français" && age >= 18) ||(nat== "Etranger" && age <18))
 
 
         
-        /*-------------------------------------Les fonctions-------------------------*/
-        /* Une fonction est un bloc d'instructions réutilisable, elle peut prendre des paramétres et renvoyer un résultat , elle est déclarée avec le mot function*/
+    /*-------------------------------------Les fonctions-------------------------*/
+    /* Une fonction est un bloc d'instructions réutilisable, elle peut prendre des paramétres et renvoyer un résultat , elle est déclarée avec le mot function*/
     function bonjourmonde(){
         console.log("Hello Word")
     }
@@ -251,36 +251,129 @@ if((nat== "Français" && age >= 18) ||(nat== "Etranger" && age <18))
         let res = 46654
         let essence = 7746
         let anneLumiere = 446555
-
+        
         let solution = ((res*essence)/anneLumiere)*64564645
-
+        
         return solution
     }
-let solution = calculNasa()
-
-//Ecrire une fonction qui afiche Bonjour
-function bonjour1(){
-    console.log("Bonjour")
-}
-bonjour1()
-
-// Ecrire une fonction qui prend en paramétre et qui affiche Bonjour [Le prénom passé en paramétre]
-function Bonjour2(prenom){
-    console.log("Bonjour", prenom)
-    /*return "Bonjour" + prenom
+    let solution = calculNasa()
+    
+    //Ecrire une fonction qui afiche Bonjour
+    function bonjour1(){
+        console.log("Bonjour")
+    }
+    bonjour1()
+    
+    // Ecrire une fonction qui prend en paramétre et qui affiche Bonjour [Le prénom passé en paramétre]
+    function Bonjour2(prenom){
+        console.log("Bonjour", prenom)
+        /*return "Bonjour" + prenom
+        */
+    }
+    Bonjour2("Sarah")
+    Bonjour2("Kenza")
+    /*let hello3 = Bonjour("Kenza")
+    console.log(hello3);
     */
-}
-Bonjour2("Sarah")
-Bonjour2("Kenza")
-/*let hello3 = Bonjour("Kenza")
-console.log(hello3);
-*/
+   
+   // Ecrire une fonction qui calcule le périmétre d'un carré et l'afficher
+   function carree(C){
+       let solution1=(C*4)
+       return solution1
+    }
+    let solution1= carree(3)
+    console.log(solution1)
+    //Version simplifiée
+    /*
+    function carré(x){
+        return x * 4
+    }
+    let result = carré (3);
+    console.log(result)
+    */
+   //Algorithme qui calcule et affiche le carré d'un nombre 
+   function expo(resultat){
+       return resultat**2
+    }
+    let result = expo(4)
+    console.log(result)
+    
+    // Créer un algorithmique qui affiche les nombres pairs de 0 à 100
+    
+    for(let i= 0; i<= 100; i= i+2) {
+        console.log(i)
+    }
+    /*Transformer ce for en fonction */
+    /*function pair(){
+        for(let i= 0; i<= 100; i= i+2) {
+            console.log(i)
+        }
+    }*/
+    /*pair() */
+    /*Corection*/
+    // function paire(){
+        //for(let i= 0; i<= 100; i= i+2) {
+            //console.log(i) }
+            // }
+            // pair()
+            // Paramétrer (transformer) la fonction et pouvoir décider jusqu'à quels nombres la boucle se fait
+            // function paire (a) {
+                //     for(let i= 0; i<= a; i= i+2) {
+                    //         console.log(i)
+                    // } 
+                    // }
+                    // paire(120)
+                    
+     // Je veux pouvoir décider du pas de la fonction en plus 
+    function paire (a , b){
+        for(let i= 0; i<= a; i= i+b) {
+            console.log(i)
+                        }
+         }
+    paire(120 , 4)
+     /*-------------------------------------Les Tableaux-------------------------*/
 
-// Ecrire une fonction qui calcule le périmétre d'un carré et l'afficher
-function Carré(C){
-let solution1=(C*4)
-return solution1
+/* Un tableau (array) est un type de donnée qui peut contenir plusieurs élements
+On peut créer un tableau en utlisant des crochets [] et en y insérant les élements séparés par des virgules*/
+let sunday= "dimanche";
+let week = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", sunday , ["rachid", "malik"]]
+
+//On peut accéder à un élement du tableau en utilisant son index numérique (indice) 
+//L'index du premier element est toujours 0.
+console.log(week[7][1])
+
+//Pour modifier la valeur d'un élement du tableau, je précice l'indice 
+week[6] ='test'
+console.log(week)
+
+//Pour connaitre la longeur d'un tableau nous pouvons utliser la propriété .lenght
+console.log(week.length)
+
+//Tableau animal
+         //6 animaux dedans afficher le premier et le dernier 
+let animal= ["Zebre","Chien", "Chat", "Serpent", "Lapin", "Tigre "]
+console.log(animal[0], animal[5])
+//Faire une boucle for pour mettre en place l'animal 
+// for(let i=0; i< animal.length; i++){
+//     console.log(animal[i]);
+// }
+//Faire une fonction arrayLoop
+    //Affiche tous les élements du tableau animals
+function arrayLoop(array){
+    for(let i=0; i< array.length; i++){
+        console.log(array[i]);
+    }
 }
-let solution1= 3*4
-console.log(solution1)
-//Algorithme qui calcule et affiche le carré d'un nombre 
+arrayLoop(animal)
+
+// Les tableaux peuvent contenir des tableaux 
+let notes = [
+    [12, 16, 19],
+    [9, 5, 4],
+    [12, 24, 7]
+];
+// Pour accéder à une note 
+console.log(notes[1][2]);
+
+//
+   
